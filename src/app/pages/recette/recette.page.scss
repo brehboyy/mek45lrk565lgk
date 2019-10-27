@@ -1,0 +1,30 @@
+.titre{
+    text-align: center;
+    font-family: 'Montserrat-SemiBold';
+    color:white;
+    text-shadow: 2px 2px 4px #383737;
+}
+.fab-class{
+    height: 200px;
+}
+.angular-with-newlines{
+    white-space : pre-wrap;	
+    font-size : 1.8rem;
+    font-family: 'Montserrat';
+}
+.content{
+    background-color: var(--ion-peche);
+}
+.wrap{
+    background-color: transparent;
+}
+.imageRecette{
+    background-color: transparent;
+    box-shadow: 10px 10px 20px #383737;
+}
+.toolbar-background {
+    background-color: var(--ion-background);
+  }
+.header-divider{
+    background: transparent;
+}

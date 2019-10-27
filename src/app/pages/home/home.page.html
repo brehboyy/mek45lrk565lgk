@@ -1,0 +1,98 @@
+<ion-header>
+	<ion-row class="headerMenu">
+		<ion-icon item-left color="light" name="custom-power" (Tap)="presentDeco()"></ion-icon>
+		<ion-title text-center>Mealcheck</ion-title>
+		<!-- <ion-icon class="headerIcon" item-right name="custom-person" color="light" (click)="openProfil()"></ion-icon> -->
+	</ion-row>
+
+</ion-header>
+
+<ion-content>
+	<ion-slides [pager]="false" class="slideHome">
+
+
+		<ion-slide class="slideHome">
+			<ion-card *ngFor="let recette of Recettes" class="card">
+				<ion-card-header class="headerPhoto" (click)="openRecette(recette.REC_Identifier)">
+					<img src={{recette.REC_Photourl}} class="imageRecette" />
+				</ion-card-header>
+				<ion-card-content class="card-content">
+					<ion-list>
+						<ion-label>
+							<h4>{{recette.REC_Title}}</h4>
+						</ion-label>
+						<ion-label>
+							{{recette.REC_DescriptionFR}}
+						</ion-label>
+					</ion-list>
+				</ion-card-content>
+			</ion-card>
+
+		</ion-slide>
+
+
+		<ion-slide class="slideHome">
+			<ion-item>
+				<ion-label>Mon Frigo</ion-label>
+				<ion-select [(ngModel)]="id_cat" placeholder="Selectionner une categorie" interface="popover">
+					<ion-select-option *ngFor="let categorie of categories" value={{categorie.CAT_Identifier}}> {{categorie.CAT_Name}}
+					</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-card [hidden]="id_cat == 0" *ngFor="let ingredient of Ingredients | filter : 'MI_CategorieIdentifier' : id_cat"
+				class="carte">
+				<ion-item-group class="card-container">
+					<ion-item>
+						<ion-avatar item-left class="imageIngredient">
+							<img src="http://mealcheck.eu/assets/imgs/{{ingredient.MI_Identifier}}.jpg" />
+						</ion-avatar>
+						<h4 class="ingredient_name">{{ingredient.MI_Name}}</h4>
+						<ion-icon name="custom-cancel" class="card-icon" item-right color="primary"
+							(click)="deleteIng(ingredient)"></ion-icon>
+					</ion-item>
+				</ion-item-group>
+			</ion-card>
+			<ion-card [hidden]="id_cat != 0" *ngFor="let ingredient of Ingredients" class="carte">
+				<ion-item-group class="card-container">
+					<ion-item>
+						<ion-avatar item-left class="imageIngredient">
+							<img src="http://mealcheck.eu/assets/imgs/{{ingredient.MI_Identifier}}.jpg" />
+						</ion-avatar>
+						<h4 class="ingredient_name">{{ingredient.MI_Name}}</h4>
+						<ion-icon name="custom-cancel" class="card-icon" item-right color="primary"
+							(click)="deleteIng(ingredient)"></ion-icon>
+					</ion-item>
+				</ion-item-group>
+			</ion-card>
+
+
+		</ion-slide>
+	</ion-slides>
+</ion-content>
+
+<ion-toolbar class="footer" color="tabs1">
+	<ion-icon name="custom-prev-arrow" color="light" (click)="tobook()">
+	</ion-icon>
+	<ion-icon name="custom-calendar" color="light" (click)="openMP()">
+	</ion-icon>
+	<ion-icon color="plus" name="custom-add" (click)="magasin()">
+	</ion-icon>
+	<ion-icon name="custom-next-arrow" color="light" (click)="tofrigo()">
+	</ion-icon>
+</ion-toolbar>
+
+<!-- <ion-footer no-border style="bottom: 0px; position: absolute;">
+	<ion-toolbar *ngIf="vue" class="footer" color="danger">
+		<ion-icon name="custom-calendar" color="light" (click)="openMP()">
+		</ion-icon>
+		<ion-icon name="custom-vegetables" color="light" (click)="move()">
+		</ion-icon>
+	</ion-toolbar>
+
+	<ion-toolbar *ngIf="!vue" class="footer" color="primary">
+		<ion-icon name="custom-book" color="light" (click)="move()">
+		</ion-icon>
+		<ion-icon class="footer-test" name="custom-add" color="yellow" (click)="magasin()">
+		</ion-icon>
+	</ion-toolbar>
+</ion-footer> -->

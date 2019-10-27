@@ -1,0 +1,182 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+:root {
+  /** primary **/
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+
+  /** secondary **/
+  --ion-color-secondary: #0cd1e8;
+  --ion-color-secondary-rgb: 12, 209, 232;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #0bb8cc;
+  --ion-color-secondary-tint: #24d6ea;
+
+  /** tertiary **/
+  --ion-color-tertiary: #7044ff;
+  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #633ce0;
+  --ion-color-tertiary-tint: #7e57ff;
+
+  /** success **/
+  --ion-color-success: #10dc60;
+  --ion-color-success-rgb: 16, 220, 96;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0ec254;
+  --ion-color-success-tint: #28e070;
+
+  /** warning **/
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e0b500;
+  --ion-color-warning-tint: #ffd31a;
+
+  /** danger **/
+  --ion-color-danger: #f04141;
+  --ion-color-danger-rgb: 245, 61, 61;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d33939;
+  --ion-color-danger-tint: #f25454;
+
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 34, 34;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --ion-color-medium: #989aa2;
+  --ion-color-medium-rgb: 152, 154, 162;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #86888f;
+  --ion-color-medium-tint: #a2a4ab;
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 244, 244;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  /** tabs1 **/
+  --ion-color-tabs1: #DF7C40;
+  --ion-color-tabs1-rgb: 223,124,64;
+  --ion-color-tabs1-contrast: #000000;
+  --ion-color-tabs1-contrast-rgb: 0,0,0;
+  --ion-color-tabs1-shade: #c46d38;
+  --ion-color-tabs1-tint: #e28953;
+
+/** violett **/
+  --ion-color-violett: #621295;
+  --ion-color-violett-rgb: 98,18,149;
+  --ion-color-violett-contrast: #ffffff;
+  --ion-color-violett-contrast-rgb: 255,255,255;
+  --ion-color-violett-shade: #561083;
+  --ion-color-violett-tint: #722aa0;
+
+/** background-blue **/
+  --ion-color-background-blue: #366ed8;
+  --ion-color-background-blue-rgb: 54,110,216;
+  --ion-color-background-blue-contrast: #ffffff;
+  --ion-color-background-blue-contrast-rgb: 255,255,255;
+  --ion-color-background-blue-shade: #3061be;
+  --ion-color-background-blue-tint: #4a7ddc;
+
+/** plus **/
+  --ion-color-plus: #95fa95;
+  --ion-color-plus-rgb: 149,250,149;
+  --ion-color-plus-contrast: #000000;
+  --ion-color-plus-contrast-rgb: 0,0,0;
+  --ion-color-plus-shade: #83dc83;
+  --ion-color-plus-tint: #a0fba0;
+
+
+  --ion-peche: #DF7C40;
+  --ion-background: #366ed8;
+  --ion-buttoncolor1 : #32db64;
+  --ion-buttoncolor2 : red;
+  --ion-tabs1background: #DF7C40;
+  --ion-tabs2background: yellow;
+  --ion-headerPrinc: #DF7C40;
+  --ion-headerModal: purple;
+  --ion-violet : #621295;
+  --ion-redt: #c40b13;
+  --ion-carteFrigo: #222;
+  --ion-carteRecette: green;
+  --ion-backgroundCategorie: #6881B4;
+  
+}
+
+.ion-color-tabs1{
+    --ion-color-base: var(--ion-color-tabs1) !important;
+    --ion-color-base-rgb: var(--ion-color-tabs1-rgb) !important;
+    --ion-color-contrast: var(--ion-color-tabs1-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-tabs1-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-tabs1-shade) !important;
+    --ion-color-tint: var(--ion-color-tabs1-tint) !important;
+}
+.ion-color-violett{
+  --ion-color-base: var(--ion-color-violett) !important;
+  --ion-color-base-rgb: var(--ion-color-violett-rgb) !important;
+  --ion-color-contrast: var(--ion-color-violett-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-violett-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-violett-shade) !important;
+  --ion-color-tint: var(--ion-color-violett-tint) !important;
+}
+
+.ion-color-background-blue{
+  --ion-color-base: var(--ion-color-background-blue) !important;
+  --ion-color-base-rgb: var(--ion-color-background-blue-rgb) !important;
+  --ion-color-contrast: var(--ion-color-background-blue-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-background-blue-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-background-blue-shade) !important;
+  --ion-color-tint: var(--ion-color-background-blue-tint) !important;
+}
+
+.ion-color-plus{
+  --ion-color-base: var(--ion-color-plus) !important;
+  --ion-color-base-rgb: var(--ion-color-plus-rgb) !important;
+  --ion-color-contrast: var(--ion-color-plus-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-plus-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-plus-shade) !important;
+  --ion-color-tint: var(--ion-color-plus-tint) !important;
+}
+// Fonts
+// --------------------------------------------------
+
+@font-face{
+	font-family: "Montserrat";
+	src:url('../assets/fonts/Montserrat-Regular.ttf');
+}
+@font-face{
+	font-family: "Montserrat-Bold";
+	src:url('../assets/fonts/Montserrat-Bold.ttf');
+}
+@font-face{
+	font-family: "Montserrat-ExtraBold";
+	src:url('../assets/fonts/Montserrat-ExtraBold.ttf');
+}
+@font-face{
+	font-family: "Montserrat-SemiBold";
+	src:url('../assets/fonts/Montserrat-SemiBold.ttf');
+}
+* {
+    font-family: 'Montserrat';
+}
